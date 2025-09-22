@@ -62,3 +62,40 @@ body {
     font-weight: 500;
     width: 100%;
 }
+
+
+.apresentacao__lista__requisitos {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 20px 0;
+    list-style-type: disc;
+    color: #E0E0E0;
+}
+
+.cadastro__link {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+  color: #B22222;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.cadastro__link:hover {
+  color: #FAFAFA;
+}
+
+.apresentacao__lista__contatos {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 20px 0;
+    list-style-type: none;
+    color: #E0E0E0;
+}
