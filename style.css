@@ -99,3 +99,43 @@ body {
     list-style-type: none;
     color: #E0E0E0;
 }
+
+.produtos__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.produtos__container__item {
+  background-color: #2C3E50;
+  color: #FAFAFA;
+  width: 45%;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.produtos__container__item__imagem {
+  width: 10%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.produtos__container__item__descricao {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.produtos__container__item span {
+  font-weight: bold;
+  font-size: 18px;
+  color: #B22222;
+}
+
+.produtos__container__item:hover {
+  transform: scale(1.03);
+}
