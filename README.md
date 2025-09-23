@@ -30,7 +30,7 @@
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/HiagoAlvesdasilva/loja-virtual-study
+   git clone https://github.com/HiagoAlvesdasilva/loja-virtual-study/tree/exercicios
 
 
 ---
