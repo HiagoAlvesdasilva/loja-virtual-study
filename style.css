@@ -265,9 +265,9 @@ button[type="submit"]:hover {
 
 @media (max-width: 768px) {
   .cabecalho__menu {
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
-    padding: 15px;
+    padding: 10px;
   }
 
   .cabecalho__menu__link {
