@@ -262,3 +262,78 @@ button[type="submit"]:hover {
 .botao-comprar:hover {
   background-color: #8B1A1A;
 }
+
+@media (max-width: 768px) {
+  .cabecalho__menu {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .cabecalho__menu__link {
+    font-size: 16px;
+  }
+
+  .apresentacao {
+    padding: 20px 10px;
+  }
+
+  .apresentacao__titulo {
+    font-size: 32px;
+  }
+
+  .apresentacao__texto {
+    font-size: 18px;
+  }
+
+  .apresentacao__imagem img {
+    width: 90%;
+    height: auto;
+  }
+
+  .apresentacao__lista__requisitos,
+  .apresentacao__lista__contatos {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .formulario-cadastro {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .formulario-cadastro h1 {
+    font-size: 24px;
+  }
+
+  .cadastro__form input[type="text"],
+  .cadastro__form input[type="tel"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button[type="submit"],
+  .botao-comprar {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .produtos__container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .produtos__container__item {
+    width: 90%;
+    height: auto;
+  }
+
+  .produtos__container__item p.descricao {
+    font-size: 14px;
+  }
+
+  .produtos__container__item span.preco {
+    font-size: 16px;
+  }
+}
