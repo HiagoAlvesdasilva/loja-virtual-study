@@ -107,6 +107,86 @@ body {
   color: #FAFAFA;
 }
 
+.formulario__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1C1C1C;
+  font-family: 'Montserrat', sans-serif;
+  color: #FAFAFA;
+}
+
+
+.formulario-cadastro {
+  
+  background-color: #2C3E50;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.formulario-cadastro h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #FAFAFA;
+}
+
+.cadastro__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cadastro__form label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.cadastro__form input[type="text"],
+.cadastro__form input[type="tel"] {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #FAFAFA;
+  color: #2C3E50;
+}
+
+.termos {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.termos a {
+  color: #B22222;
+  text-decoration: underline;
+}
+
+button[type="submit"] {
+  background-color: #B22222;
+  color: #FAFAFA;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #8B1A1A;
+}
+
 .apresentacao__lista__contatos {
     text-align: left;
     max-width: 600px;
