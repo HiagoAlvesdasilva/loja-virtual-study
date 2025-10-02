@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* 🎨 Variáveis globais */
+:root {
+  /* Cores principais */
+  --cor-fundo: #1C1C1C;
+  --cor-fundo-secundario: #2C3E50;
+  --cor-texto: #E0E0E0;
+  --cor-texto-claro: #FAFAFA;
+  --cor-destaque: #B22222;
+  --cor-destaque-hover: #8B1A1A;
+  --cor-preco: #ff0000;
+
+  /* Sombras */
+  --sombra-img: 0 4px 12px rgba(55, 91, 102, 0.993);
+  --sombra-card: 0 8px 24px rgba(0, 0, 0, 0.6);
+
+  /* Fontes */
+  --fonte-principal: 'Montserrat', sans-serif;
+  --fonte-titulo: 'Krona One', sans-serif;
+
+  /* Tamanhos de texto */
+  --fs-base: 16px;
+  --fs-pequeno: 14px;
+  --fs-medio: 18px;
+  --fs-grande: 24px;
+  --fs-titulo: 32px;
+  --fs-titulo-grande: 45px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,16 +35,17 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #1C1C1C;
-  color: #E0E0E0;
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* ====== Cabeçalho ====== */
 .cabecalho__menu {
-  background-color: #2C3E50;
+  background-color: var(--cor-fundo-secundario);
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -24,17 +53,18 @@ body {
 }
 
 .cabecalho__menu__link {
-  color: #FAFAFA;
+  color: var(--cor-texto-claro);
   text-decoration: none;
   font-weight: 600;
-  font-size: 18px;
+  font-size: var(--fs-medio);
   transition: color 0.3s ease;
 }
 
 .cabecalho__menu__link:hover {
-  color: #B22222;
+  color: var(--cor-destaque);
 }
 
+/* ====== Apresentação ====== */
 .apresentacao {
   flex: 1;
   padding: 40px 20px;
@@ -42,15 +72,15 @@ body {
 }
 
 .apresentacao__titulo {
-  font-family: 'Krona One', sans-serif;
-  font-size: 45px;
+  font-family: var(--fonte-titulo);
+  font-size: var(--fs-titulo-grande);
   margin-bottom: 20px;
-  color: #FAFAFA;
+  color: var(--cor-texto-claro);
 }
 
 .apresentacao__texto {
-  font-size: 24px;
-  color: #E0E0E0;
+  font-size: var(--fs-grande);
+  color: var(--cor-texto);
 }
 
 .apresentacao__imagem {
@@ -66,74 +96,82 @@ body {
   max-width: 95%;
   height: 70%;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(55, 91, 102, 0.993);
+  box-shadow: var(--sombra-img);
 }
 
-
-
+/* ====== Rodapé ====== */
 .rodape {
-  background-color: #2C3E50;
-  color: #FAFAFA;
+  background-color: var(--cor-fundo-secundario);
+  color: var(--cor-texto-claro);
   text-align: center;
   padding: 10px;
-  font-size: 16px;
+  font-size: var(--fs-base);
   font-weight: 500;
   width: 100%;
   margin-top: auto;
 }
 
-.apresentacao__lista__requisitos {
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.6;
-    padding: 20px 0;
-    list-style-type: disc;
-    color: #E0E0E0;
+/* ====== Listas ====== */
+.apresentacao__lista__requisitos,
+.apresentacao__lista__contatos {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: var(--fs-medio);
+  line-height: 1.6;
+  padding: 20px 0;
+  color: var(--cor-texto);
 }
 
+.apresentacao__lista__requisitos {
+  list-style-type: disc;
+}
+
+.apresentacao__lista__contatos {
+  list-style-type: none;
+}
+
+/* ====== Links e botões ====== */
 .cadastro__link {
   display: inline-block;
   text-decoration: none;
   margin-top: 20px;
-  color: #B22222;
+  color: var(--cor-destaque);
   font-weight: bold;
-  font-size: 18px;
+  font-size: var(--fs-medio);
   transition: color 0.3s ease;
 }
 
 .cadastro__link:hover {
-  color: #FAFAFA;
+  color: var(--cor-texto-claro);
 }
 
+/* ====== Formulário ====== */
 .formulario__body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #1C1C1C;
-  font-family: 'Montserrat', sans-serif;
-  color: #FAFAFA;
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-claro);
 }
 
-
 .formulario-cadastro {
-  
-  background-color: #2C3E50;
+  background-color: var(--cor-fundo-secundario);
   padding: 40px;
   border-radius: 12px;
   max-width: 500px;
   width: 100%;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--sombra-card);
 }
 
 .formulario-cadastro h1 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 32px;
+  font-size: var(--fs-titulo);
   font-weight: bold;
-  color: #FAFAFA;
+  color: var(--cor-texto-claro);
 }
 
 .cadastro__form {
@@ -143,7 +181,7 @@ body {
 }
 
 .cadastro__form label {
-  font-size: 16px;
+  font-size: var(--fs-base);
   font-weight: 500;
   margin-bottom: 5px;
 }
@@ -153,51 +191,41 @@ body {
   padding: 12px;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
-  background-color: #FAFAFA;
-  color: #2C3E50;
+  font-size: var(--fs-base);
+  background-color: var(--cor-texto-claro);
+  color: var(--cor-fundo-secundario);
 }
 
 .termos {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 14px;
+  font-size: var(--fs-pequeno);
   line-height: 1.4;
 }
 
 .termos a {
-  color: #B22222;
+  color: var(--cor-destaque);
   text-decoration: underline;
 }
 
 button[type="submit"] {
-  background-color: #B22222;
-  color: #FAFAFA;
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
   padding: 14px;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: var(--fs-base);
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #8B1A1A;
+  background-color: var(--cor-destaque-hover);
 }
 
-.apresentacao__lista__contatos {
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.6;
-    padding: 20px 0;
-    list-style-type: none;
-    color: #E0E0E0;
-}
-
+/* ====== Produtos ====== */
 .produtos__container {
   display: flex;
   flex-wrap: wrap;
@@ -209,8 +237,8 @@ button[type="submit"]:hover {
 }
 
 .produtos__container__item {
-  background-color: #2C3E50;
-  color: #FAFAFA;
+  background-color: var(--cor-fundo-secundario);
+  color: var(--cor-texto-claro);
   padding: 10px;
   border-radius: 8px;
   text-align: center;
@@ -232,14 +260,14 @@ button[type="submit"]:hover {
 }
 
 .produtos__container__item p.descricao {
-  font-size: 16px;
+  font-size: var(--fs-base);
   margin-bottom: 10px;
 }
 
 .produtos__container__item span.preco {
   font-weight: bold;
-  font-size: 18px;
-  color: #ff0000;
+  font-size: var(--fs-medio);
+  color: var(--cor-preco);
 }
 
 .produtos__container__item:hover {
@@ -247,22 +275,23 @@ button[type="submit"]:hover {
 }
 
 .botao-comprar {
-  background-color: #B22222;
-  color: #FAFAFA;
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
   border: none;
   padding: 10px 20px;
   margin-top: 10px;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: var(--fs-base);
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .botao-comprar:hover {
-  background-color: #8B1A1A;
+  background-color: var(--cor-destaque-hover);
 }
 
+/* ====== Responsividade ====== */
 @media (max-width: 768px) {
   .cabecalho__menu {
     flex-direction: row;
@@ -271,7 +300,7 @@ button[type="submit"]:hover {
   }
 
   .cabecalho__menu__link {
-    font-size: 16px;
+    font-size: var(--fs-base);
   }
 
   .apresentacao {
@@ -279,11 +308,11 @@ button[type="submit"]:hover {
   }
 
   .apresentacao__titulo {
-    font-size: 32px;
+    font-size: var(--fs-titulo);
   }
 
   .apresentacao__texto {
-    font-size: 18px;
+    font-size: var(--fs-medio);
   }
 
   .apresentacao__imagem img {
@@ -293,7 +322,7 @@ button[type="submit"]:hover {
 
   .apresentacao__lista__requisitos,
   .apresentacao__lista__contatos {
-    font-size: 16px;
+    font-size: var(--fs-base);
     padding: 10px 0;
   }
 
@@ -303,18 +332,18 @@ button[type="submit"]:hover {
   }
 
   .formulario-cadastro h1 {
-    font-size: 24px;
+    font-size: var(--fs-grande);
   }
 
   .cadastro__form input[type="text"],
   .cadastro__form input[type="tel"] {
-    font-size: 14px;
+    font-size: var(--fs-pequeno);
     padding: 10px;
   }
 
   button[type="submit"],
   .botao-comprar {
-    font-size: 14px;
+    font-size: var(--fs-pequeno);
     padding: 10px;
   }
 
@@ -330,10 +359,10 @@ button[type="submit"]:hover {
   }
 
   .produtos__container__item p.descricao {
-    font-size: 14px;
+    font-size: var(--fs-pequeno);
   }
 
   .produtos__container__item span.preco {
-    font-size: 16px;
+    font-size: var(--fs-base);
   }
 }
