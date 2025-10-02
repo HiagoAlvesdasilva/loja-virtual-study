@@ -146,7 +146,18 @@ body {
   color: var(--cor-texto-claro);
 }
 
-/* ====== Formulário ====== */
+/* ====== Formulários ====== */
+
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-claro);
+}
+
 .formulario__body {
   display: flex;
   justify-content: center;
@@ -156,6 +167,15 @@ body {
   font-family: var(--fonte-principal);
   color: var(--cor-texto-claro);
 }
+.formulario__apresentacao {
+  background-color: var(--cor-fundo-secundario);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: var(--sombra-card);
+}
+
 
 .formulario-cadastro {
   background-color: var(--cor-fundo-secundario);

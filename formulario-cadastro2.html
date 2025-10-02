@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Cadastro</title>
+    <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./assets/icon/fav-icon.png" type="image/png" />
+</head>
+<body class="formulario__body">
+    <main class="formulario__apresentacao">
+        <h1 class="formulario__apresentacao__texto" > Cadastro </h1>
+        <div class="formulario__apresentacao__cadastro">
+            <form class="formulario__apresentacao__cadastro__form" action="GET">
+
+              <label>Nome:</label>
+              <input type="text" name="txtNome" size="50"
+              title="Digite seu nome" maxlength="40">
+              <br>
+              <label>Senha:</label>
+              <input type="password" name="txtSenha" size="50"
+              title="Digite sua senha" maxlength="8">
+              <br>
+              <label>CPF:</label>
+              <input type="number" name="numCpf" size="100"
+              title="Digite seu Cpf" maxlength="11">
+              <br>
+              <label>Email:</label>
+              <input type="email" name="txtEmail" maxlength="50">
+              <br> <br>
+
+              <label>Sexo:</label>
+              <br>
+              <input type="radio" name="radSexo" value="M">Masculino
+              <input type="radio" name="radSexo" value="F">Feminino
+              <br> <br>
+        
+              <label>Melhor Horário Para Contato:</label>
+              <select name="aptTurma">
+                <option value="Mat">Matutino</option>
+                <option value="Vesp">Vespertino</option>
+                <option value="Not">Noturno</option>
+              </select>
+              <br><br>
+          
+              
+        
+              <label>Data de Nascimento:</label>
+              <input type="date" name="txtData" maxlength="50">
+              <br><br>
+        
+              <label>Faça sua sugestão</label>
+              <textarea name="txtSugestao" rows="10" cols="50"></textarea>
+              <br><br>
+               
+              <input type="submit" name="enviar">
+              <input type="reset" name="limpar">
+            </form>
+          </div>
+          </div>
+    </main>
+    
+</body>
+</html>
