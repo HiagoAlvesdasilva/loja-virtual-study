@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Estilo Livre</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/formulario.css">
+  <link rel="icon" href="../assets/icon/fav-icon.png" type="image/png" />
+</head>
+<body>
+  <nav class="cabecalho__menu">
+    <a class="cabecalho__menu__link" href="../index.html">Início</a>
+    <a class="cabecalho__menu__link" href="cadastro.html">Cadastro</a>
+    <a class="cabecalho__menu__link" href="produtos.html">Produtos</a>
+    <a class="cabecalho__menu__link" href="falecomigo.html">Fale Comigo</a>
+    <a class="cabecalho__menu__link" href="maisvendidos.html">Mais Vendidos</a>
+  </nav>
+
+  <main class="apresentacao">
+    <h1 class="apresentacao__titulo">Cadastre-se na Estilo Livre</h1>
+    <form class="cadastro__form" data-formulario>
+
+      <fieldset class="campo">
+        <label for="nome">Nome:</label>
+        <input id="nome" name="nome" required type="text" minlength="3" placeholder="Digite seu nome"/>
+        <span class="mensagem-erro"></span>
+      </fieldset>
+
+      <fieldset class="campo">
+        <label for="cpf">CPF:</label>
+        <input id="cpf" name="cpf" required type="text" minlength="11" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="Digite seu CPF"/>
+        <span class="mensagem-erro"></span>
+      </fieldset>
+
+      <fieldset class="campo">
+        <label for="telefone">Telefone:</label>
+        <input id="telefone" name="telefone" required type="tel" placeholder="(99) 99999-9999"/>
+        <span class="mensagem-erro"></span>
+      </fieldset>
+
+      <fieldset class="campo">
+        <label for="cep">CEP:</label>
+        <input id="cep" name="cep" required type="text" placeholder="Digite seu CEP"/>
+        <span class="mensagem-erro"></span>
+      </fieldset>
+
+      <fieldset class="campo">
+        <label for="email">Email:</label>
+        <input id="email" name="email" required type="email" minlength="4" placeholder="Digite seu email"/>
+        <span class="mensagem-erro"></span>
+      </fieldset>
+
+      <fieldset class="campo">
+        <label for="dataNascimento">Data de nascimento:</label>
+        <input id="dataNascimento" name="aniversario" required type="date"/>
+        <span class="mensagem-erro"></span>
+      </fieldset>
+
+      <fieldset class="campo termos">
+        <input id="termos" name="termos" required type="checkbox"/>
+        <label for="termos">Concordo com os <a href="#">termos de uso</a> e <a href="#">política de privacidade</a>.</label>
+        <span class="mensagem-erro"></span>
+      </fieldset>
+
+      <button type="submit">Clique aqui para se cadastrar</button>
+    </form>
+  </main>
+
+  <footer class="rodape">
+    <p>Desenvolvido por Hiago Alves</p>
+  </footer>
+
+  <script type="module" src="../js/script.js"></script>
+</body>
+</html>

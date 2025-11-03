@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Cadastro</title>
-    <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="./assets/icon/fav-icon.png" type="image/png" />
+    <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../assets/icon/fav-icon.png" type="image/png" />
 </head>
 <body class="formulario__body">
     <main class="formulario__apresentacao">
@@ -22,8 +22,8 @@
               title="Digite sua senha" maxlength="8">
               <br>
               <label>CPF:</label>
-              <input type="number" name="numCpf" size="100"
-              title="Digite seu Cpf" maxlength="11">
+              <input type="text" name="numCpf" size="100"
+              title="Digite seu Cpf" minlength="11" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
               <br>
               <label>Email:</label>
               <input type="email" name="txtEmail" maxlength="50">

@@ -146,74 +146,60 @@ body {
   color: var(--cor-texto-claro);
 }
 
-/* ====== Formulários ====== */
-
-.formulario {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: var(--cor-fundo);
-  font-family: var(--fonte-principal);
-  color: var(--cor-texto-claro);
-}
-
-.formulario__body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: var(--cor-fundo);
-  font-family: var(--fonte-principal);
-  color: var(--cor-texto-claro);
-}
-.formulario__apresentacao {
-  background-color: var(--cor-fundo-secundario);
-  padding: 40px;
-  border-radius: 12px;
-  max-width: 500px;
-  width: 100%;
-  box-shadow: var(--sombra-card);
-}
-
-
-.formulario-cadastro {
-  background-color: var(--cor-fundo-secundario);
-  padding: 40px;
-  border-radius: 12px;
-  max-width: 500px;
-  width: 100%;
-  box-shadow: var(--sombra-card);
-}
-
-.formulario-cadastro h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: var(--fs-titulo);
-  font-weight: bold;
-  color: var(--cor-texto-claro);
-}
+/* ====== Formulário: Estilo Livre ====== */
 
 .cadastro__form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: var(--cor-fundo-secundario);
+  border-radius: 12px;
+  box-shadow: var(--sombra-card);
+}
+
+.cadastro__form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
 }
 
 .cadastro__form label {
   font-size: var(--fs-base);
   font-weight: 500;
-  margin-bottom: 5px;
+  color: var(--cor-texto-claro);
 }
 
 .cadastro__form input[type="text"],
-.cadastro__form input[type="tel"] {
+.cadastro__form input[type="tel"],
+.cadastro__form input[type="email"],
+.cadastro__form input[type="date"] {
+  width: 100%;
   padding: 12px;
   border: none;
   border-radius: 6px;
   font-size: var(--fs-base);
   background-color: var(--cor-texto-claro);
   color: var(--cor-fundo-secundario);
+  box-shadow: none;
+  outline: none;
+}
+
+.cadastro__form input[type="checkbox"] {
+  margin-right: 10px;
 }
 
 .termos {
@@ -222,11 +208,19 @@ body {
   gap: 10px;
   font-size: var(--fs-pequeno);
   line-height: 1.4;
+  color: var(--cor-texto-claro);
 }
 
 .termos a {
   color: var(--cor-destaque);
   text-decoration: underline;
+}
+
+.mensagem-erro {
+  font-size: var(--fs-pequeno);
+  color: var(--cor-preco);
+  margin-top: 4px;
+  min-height: 18px;
 }
 
 button[type="submit"] {
@@ -239,11 +233,30 @@ button[type="submit"] {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 button[type="submit"]:hover {
   background-color: var(--cor-destaque-hover);
 }
+
+/* ====== Responsivo ====== */
+@media (max-width: 768px) {
+  .cadastro__form {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .cadastro__form input[type="text"],
+  .cadastro__form input[type="tel"],
+  .cadastro__form input[type="email"],
+  .cadastro__form input[type="date"],
+  button[type="submit"] {
+    font-size: var(--fs-pequeno);
+    padding: 10px;
+  }
+}
+
 
 /* ====== Produtos ====== */
 .produtos__container {
@@ -346,7 +359,7 @@ button[type="submit"]:hover {
     padding: 10px 0;
   }
 
-  .formulario-cadastro {
+  /* .formulario-cadastro {
     padding: 20px;
     max-width: 90%;
   }
@@ -365,7 +378,7 @@ button[type="submit"]:hover {
   .botao-comprar {
     font-size: var(--fs-pequeno);
     padding: 10px;
-  }
+  } */
 
   .produtos__container {
     flex-direction: column;
