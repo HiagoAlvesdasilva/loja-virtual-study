@@ -34,7 +34,7 @@
 
       <fieldset class="campo">
         <label for="telefone">Telefone:</label>
-        <input id="telefone" name="telefone" required type="tel" placeholder="(99) 99999-9999"/>
+        <input id="telefone" name="telefone" required type="tel" pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" placeholder="(99) 99999-9999"/>
         <span class="mensagem-erro"></span>
       </fieldset>
 
