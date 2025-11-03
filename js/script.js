@@ -1,8 +1,8 @@
 import ehUmCpf from "./valida-cpf.js";
 import ehMaiorDeIdade from "./valida-idade.js";
+import ehUmCep from "./valida-cep.js"
 
 const camposDoFormulario = document.querySelectorAll("[required]");
-const formulario = document.querySelector('[data-formulario]');
 
 const tipoDeErro = [
   'valueMissing',
@@ -29,7 +29,8 @@ const mensagens = {
   },
   cep: {
     valueMissing: "O campo de CEP não pode estar vazio.",
-    patternMismatch: "Por favor, insira um CEP válido."
+    patternMismatch: "Por favor, insira um CEP válido.",
+    tooShort: "Digite os 8 números do seu CEP."
   },
   email: {
     valueMissing: "O campo de e-mail não pode estar vazio.",
@@ -54,13 +55,19 @@ function verificaCampo(campo) {
   let mensagem = "";
   campo.setCustomValidity('');
 
-  if (campo.name === "cpf" && campo.value.length >= 11) {
+  if (campo.name == "cpf" && campo.value.length >= 11) {
     ehUmCpf(campo);
   }
 
-  if (campo.name === "aniversario" && campo.value !== "") {
+  if (campo.name == "aniversario" && campo.value !== "") {
     ehMaiorDeIdade(campo);
   }
+
+  if (campo.name == "cep" && campo.value.length >= 8) {
+    ehUmCep(campo);
+  }
+
+
 
   tipoDeErro.forEach(erro => {
     if (campo.validity[erro]) {

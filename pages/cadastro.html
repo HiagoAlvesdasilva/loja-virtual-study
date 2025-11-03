@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro - Estilo Livre</title>
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../styles/formulario.css">
   <link rel="icon" href="../assets/icon/fav-icon.png" type="image/png" />
 </head>
 <body>
@@ -41,7 +40,7 @@
 
       <fieldset class="campo">
         <label for="cep">CEP:</label>
-        <input id="cep" name="cep" required type="text" placeholder="Digite seu CEP"/>
+        <input id="cep" name="cep" required type="text" minlength="8" pattern="\d{5}-?\d{3}" placeholder="Digite seu CEP ex: 45000-000"/>
         <span class="mensagem-erro"></span>
       </fieldset>
 
